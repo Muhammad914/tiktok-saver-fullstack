@@ -1,6 +1,13 @@
 {
   "build": {
-    "builder": "NIXPACKS"
+    "builder": "NIXPACKS",
+    "nixpacksPlan": {
+      "phases": {
+        "setup": {
+          "nixPkgs": ["ffmpeg", "python310"]
+        }
+      }
+    }
   },
   "deploy": {
     "startCommand": "gunicorn app:app"
